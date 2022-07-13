@@ -25,7 +25,7 @@ body {
 
 .buttons {
   border: 0.25em solid rgb(217, 176, 255);
-  padding: 1em 3em;
+  padding: 0.8em 2em;
   color: rgb(217, 176, 255);
   font-size: 13px;
   font-weight: bold;
@@ -333,7 +333,7 @@ section.hard .card-bio p {
 
 section.cursos {
   width: 40rem;
-  max-width: 90%;
+  max-width: 100%;
   margin: 25rem auto;
   text-align: center;
 }
@@ -345,14 +345,24 @@ section.cursos h2 {
   font-weight: bold;
 }
 section.cursos .cursos-slider {
-  width: 100%;
+  display: flex;
+}
+section.cursos .cursos-slider .slick-list {
+  width: 90%;
+}
+section.cursos .cursos-slider button {
+  display: block;
+  background: none;
+  border: none;
+  padding: 3%;
+  cursor: pointer;
 }
 
 section.projetos::before {
   content: "Projetos";
   position: absolute;
   left: 50%;
-  top: -10rem;
+  top: -6rem;
   font-size: 1.5em;
   text-shadow: 2px 2px 50px rgb(165, 75, 223);
   font-weight: bold;
@@ -363,16 +373,17 @@ section.projetos {
   align-items: center;
   justify-content: center;
   width: 90%;
-  height: 70rem;
-  margin: 45rem auto;
+  height: 60rem;
+  margin: 25rem auto;
   margin-bottom: 1rem;
   position: relative;
 }
 section.projetos .box-proj::before {
   position: absolute;
-  top: 1rem;
+  top: 6rem;
   transform: translate(-50%, -50%);
   background-color: rgba(1, 1, 2, 0.5);
+  font-size: 0.8em;
   border-radius: 1em;
   padding: 1rem 3rem;
   outline: none;
@@ -408,8 +419,6 @@ section.projetos .box-proj {
 section.projetos .order {
   width: 40%;
   padding: 2rem 1rem;
-  /* height: 20rem; */
-  /* position: absolute; */
 }
 section.projetos .order::before {
   color: rgba(1, 1, 2, 0.5);
@@ -421,10 +430,6 @@ section.projetos .box-proj video {
   object-fit: contain;
   border-radius: 0.6em;
 }
-
-/* section.projetos .order video {
-  width: 60%;
-} */
 
 section.projetos .box-proj .box-proj-desc,
 section.projetos .box-proj video {
@@ -442,7 +447,6 @@ section.projetos .box-proj img {
 section.projetos .order .box-proj-desc,
 section.projetos .order video {
   display: block;
-  /* position: absolute; */
 }
 section.projetos .order img {
   display: none;
@@ -450,15 +454,18 @@ section.projetos .order img {
 
 section.projetos .box-proj .box-proj-desc p {
   word-wrap: break-word;
-  /* display: inline; */
-  margin: 1rem auto;
+  margin: 1.5rem auto;
 }
-section.projetos .box-proj .box-proj-desc button {
+section.projetos .box-proj .box-proj-desc a {
+  font-size: 0.6em;
+  font-weight: 600;
+  text-decoration: none;
 }
 
 footer {
   width: 100%;
   padding: 2rem 3rem;
+  text-align: center;
   backdrop-filter: blur(8px) saturate(147%);
   -webkit-backdrop-filter: blur(8px) saturate(147%);
   background: linear-gradient(
@@ -482,15 +489,30 @@ footer small {
   section.sobre {
     flex-direction: column-reverse;
   }
-  section.projetos {
-    flex-direction: column;
-    justify-content: flex-end;
+  section.projetos::before {
+    top: -14rem;
   }
   section.projetos .box-proj {
-    width: 50%;
+    visibility: hidden;
+    width: 0;
+    font-size: 0.7em;
+  }
+  section.projetos .box-proj::before {
+    visibility: visible;
+    left: 50%;
+  }
+  section.projetos .box__1::before {
+    top: -3rem;
+  }
+  section.projetos .box__2::before {
+    top: 3rem;
+  }
+  section.projetos .box__3::before {
+    top: 9rem;
   }
   section.projetos .order {
-    width: 60%;
+    visibility: visible;
+    width: 70%;
   }
   footer p {
     grid-column-start: 1;
@@ -507,9 +529,6 @@ footer small {
 }
 
 @media screen and (max-width: 768px) {
-  /* header {
-    position: inherit;
-  } */
   section.sobre,
   section.hard {
     margin: 10rem auto;
@@ -525,24 +544,11 @@ footer small {
     width: 350px;
     height: 325px;
   }
-  section.projetos .box-proj {
-    width: 80%;
+  section.projetos {
+    height: 55rem;
   }
   section.projetos .order {
     width: 100%;
-  }
-  section.projetos::before {
-    top: -13rem;
-  }
-  section.projetos .box__1::before {
-    top: -4rem;
-  }
-  section.projetos .box__2::before {
-    left: 50%;
-    top: 1rem;
-  }
-  section.projetos .box__3::before {
-    left: 80%;
-    top: 6rem;
+    font-size: 0.7em;
   }
 }

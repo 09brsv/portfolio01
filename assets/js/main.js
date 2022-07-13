@@ -29,7 +29,7 @@ const mudarMenuMobile = () => {
             body.style.overflow = 'auto';
             textMenuMobile.textContent = 'Menu'; 
         }
-    },600);
+    },300);
     
 
 }
@@ -124,9 +124,7 @@ $('.cursos-slider').slick({
     speed: 1350,
     autoplay: true,
     autoplaySpeed: 4000,
-    lazyLoad: 'ondemand',
-    slideToShow: 1,
-    arrows: false,
+    slideToShow: 1, 
     cssEase: 'linear',
 })
 
@@ -140,3 +138,5 @@ $('nav a').click(function() {
       return false;
   })
 
+$('.slick-prev').html('<i class="fa-solid fa-circle-arrow-left"></i>') 
+$('.slick-next').html('<i class="fa-solid fa-circle-arrow-right"></i>')
