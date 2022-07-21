@@ -10,7 +10,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap");
 
 body {
-  background-image: url("../img/neon.jpg");
+  background-image: url("../img/neon-min.jpg");
   background-size: cover;
   position: relative;
 }
@@ -74,25 +74,25 @@ nav ul a:hover {
   border-bottom: 3px solid rgb(165, 75, 223);
 }
 
-nav.desktop {
+header nav.desktop {
   width: 100%;
   height: 100%;
 }
-nav.desktop ul li:not(:first-of-type) {
+header nav.desktop ul li:not(:first-of-type) {
   margin-left: 55px;
 }
-.desktop ul {
+header nav.desktop ul {
   display: flex;
   width: 70%;
   text-align: center;
   margin: auto;
 }
-.desktop ul li {
+header nav.desktop ul li {
   width: 10rem;
   height: 2.5rem;
   margin: auto;
 }
-.desktop ul li a {
+header nav.desktop ul li a {
   line-height: 2rem;
 }
 
@@ -102,53 +102,53 @@ nav ul li a.activated {
   border-bottom: 3px solid rgb(165, 75, 223);
 }
 
-.menu-mobile {
+header .menu-mobile {
   display: none;
   align-items: center;
   position: absolute;
   right: 2rem;
   top: 1rem;
 }
-.icon-mobile,
-.menu-mobile strong {
+header .menu-mobile .icon-mobile,
+header .menu-mobile strong {
   cursor: pointer;
 }
 
-.icon-mobile {
+header .menu-mobile .icon-mobile {
   margin-left: 1.2rem;
   z-index: 997;
 }
-.icon-mobile,
-.icon-mobile > span {
+header .menu-mobile .icon-mobile,
+header .menu-mobile .icon-mobile > span {
   transition: all 0.4s ease-in-out;
 }
 
-.icon-mobile > span {
+header .menu-mobile .icon-mobile > span {
   display: block;
   width: 28px;
   height: 2px;
   border-radius: 9999px;
   background-color: black;
 }
-.icon-mobile span:not(:last-child) {
+header .menu-mobile .icon-mobile span:not(:last-child) {
   margin-bottom: 7px;
 }
-.icon-mobile.active {
+header .menu-mobile .icon-mobile.active {
   transition-delay: 0.6s;
   transform: rotate(45deg);
 }
-.icon-mobile.active > span:nth-child(1),
-.icon-mobile.active > span:nth-child(3) {
+header .menu-mobile .icon-mobile.active > span:nth-child(1),
+header .menu-mobile .icon-mobile.active > span:nth-child(3) {
   transition-delay: 0.4s;
 }
-.icon-mobile.active > span:nth-child(1) {
+header .menu-mobile .icon-mobile.active > span:nth-child(1) {
   transform: translateY(9px);
 }
-.icon-mobile.active > span:nth-child(3) {
+header .menu-mobile .icon-mobile.active > span:nth-child(3) {
   transform: translateY(-9px) rotate(90deg);
 }
 
-.menu-mobile {
+header .menu-mobile {
   z-index: 999;
   position: fixed;
   transition: 0.5s;
@@ -193,7 +193,7 @@ section.sobre {
   margin: 25rem auto;
 }
 section.sobre .soft {
-  max-width: 800px;
+  max-width: 700px;
   text-align: center;
 }
 section.sobre .soft article {
@@ -221,17 +221,17 @@ section.sobre a i {
   margin-left: 10px;
 }
 
-.minha-imagem {
-  width: 490px;
-  height: 490px;
+section.sobre .minha-imagem {
+  width: 40%;
+  height: 35rem;
   border-radius: 50%;
-  background: url("../img/me-github.jpeg");
+  background: url("../img/me-github-min.jpeg");
   background-position: center;
   background-size: 120% 120%;
   margin-bottom: 3rem;
 }
 
-.minha-imagem img {
+section.sobre .minha-imagem img {
   object-fit: cover;
 }
 
@@ -410,7 +410,7 @@ section.projetos .box__3::before {
 }
 section.projetos .box-proj {
   width: 20%;
-  background-image: url("../img/neon.jpg");
+  background-image: url("../img/neon-min.jpg");
   background-size: cover;
   border-radius: 1em;
   border: 1px solid #ccc;
@@ -529,6 +529,9 @@ footer small {
 }
 
 @media screen and (max-width: 768px) {
+  body {
+    background-size: auto;
+  }
   section.sobre,
   section.hard {
     margin: 10rem auto;
@@ -537,12 +540,15 @@ footer small {
     display: none;
   }
   nav.show,
-  .menu-mobile {
+  header .menu-mobile {
     display: flex;
   }
   section.sobre .minha-imagem {
-    width: 350px;
-    height: 325px;
+    height: 250px;
+  }
+  section.sobre .soft article p {
+    font-size: 0.8em;
+    font-weight: 900;
   }
   section.projetos {
     height: 55rem;
