@@ -1,4 +1,4 @@
-# Meu primeiro portifolio 💓
+# Meu primeiro portfolio 💓
 
 <br>
 
