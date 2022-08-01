@@ -3,6 +3,9 @@
 <br>
 
 **Criei uma página do zero com base em vários novos truques.** 👋👋
+<br>
+
+![alt text](assets/img/portifolio.png "screenshot-portfolio")
 
 <br>
 
