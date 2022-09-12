@@ -398,7 +398,7 @@ section.projetos .box-proj:hover::before {
   background-color: rgb(217, 176, 255);
 }
 section.projetos .box__1::before {
-  content: "Butantan";
+  content: "Busca CEP";
   left: 20%;
 }
 section.projetos .box__2::before {
@@ -427,12 +427,12 @@ section.projetos .order::before {
 }
 
 section.projetos .box-proj video {
-  width: 100%;
   object-fit: contain;
   border-radius: 0.6em;
 }
 
 section.projetos .box-proj .box-proj-desc,
+section.projetos .box-proj img.gif,
 section.projetos .box-proj video {
   width: 100%;
   text-align: center;
@@ -446,10 +446,11 @@ section.projetos .box-proj img {
   border-radius: 0.6em;
 }
 section.projetos .order .box-proj-desc,
+section.projetos .order img.gif,
 section.projetos .order video {
   display: block;
 }
-section.projetos .order img {
+section.projetos .order img:not(.gif) {
   display: none;
 }
 
